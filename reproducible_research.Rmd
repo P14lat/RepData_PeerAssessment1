@@ -1,3 +1,8 @@
+---
+title: "reproducible research - Assessment 1"
+output: md_document
+---
+
 ##Loading the data
 1. Load the .csv file
 ```{r init}
@@ -112,10 +117,9 @@ initl$dateType <- ifelse(as.POSIXlt(initl$date)$wday %in% c(0,5),
 
 ```{r}
 avginitl <- aggregate(steps ~ interval + dateType, data=initl, mean)
-
 ggplot(initl, aes(interval, steps)) + 
-       geom_line() + 
-       facet_grid(dateType ~ .) +
-       xlab("Interval is 5 Minutes") + 
-       ylab("AVG steps")
+    geom_line() + 
+    facet_grid(dateType ~ .) +
+    xlab("Interval is 5 Minutes") + 
+    ylab("AVG steps")
 ```
