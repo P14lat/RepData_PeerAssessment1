@@ -1,8 +1,3 @@
----
-title: "reproducible research - Assessment 1"
-output: html_document
----
-
 ##Loading the data
 1. Load the .csv file
 ```{r init}
